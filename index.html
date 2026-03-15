@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Online Compiler</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Monaco Editor (VS Code editor) via CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/monaco-editor@0.52.0/min/vs/loader.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="title">
+          <h1>JavaScript Online Compiler</h1>
+          <p class="subtitle">Mini IDE: editor on the left, output on the right.</p>
+        </div>
+
+        <div class="actions">
+          <button id="runBtn" class="btn btn--primary" type="button" title="Ctrl/Cmd + Enter">
+            Run
+          </button>
+          <button id="clearBtn" class="btn" type="button">Clear</button>
+        </div>
+      </header>
+
+      <main class="split">
+        <section class="panel">
+          <div class="panel__header">Editor</div>
+          <!-- Monaco mounts into this container -->
+          <div id="editor" class="editor" aria-label="JavaScript code editor"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header">Output</div>
+          <pre id="output" class="output" aria-live="polite"></pre>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
